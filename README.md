@@ -13,9 +13,12 @@ Bem-vindo ao meu repositotio de aprendizado sobre GIT! Este espaço é dedicado 
  
 ## Comandos Basicos 
 
-  - mkdir nome_do_diretorio : Para criar um novo diretório (pasta) chamado "nome_do_diretorio", você pode simplesmente digitar:
-  - cd nome_do_diretorio  = Para ir para um diretório específico, você usaria: (serve para nevegar pelo sistemas)
-  - cd .. : Para voltar um nível na hierarquia de diretórios, você usaria:
+  - mkdir nome_do_diretorio : Para criar um novo diretório (pasta) chamado "nome_do_diretorio".
+  - cd nome_do_diretorio  = Para ir para um diretório específico. (serve para nevegar pelo sistemas)
+  - cd .. : Para voltar um nível na hierarquia de diretórios.
+  - touch "nome-do-arquivo.extencao" = Cria um arquivo (Isso criará um novo arquivo chamado "exemplo.txt" se ele ainda não existir. Se o arquivo já existir, o comando "touch" simplesmente atualizará os timestamps do arquivo para o momento atual.
+  - rm -rf : Para excluir um diretório e seu conteúdo de forma recursiva e a forca
+  - rm -r diretório : Para excluir um diretório e seu conteúdo de forma recursiva:
 
 ## Comando Basicos do GIT
 
@@ -40,4 +43,12 @@ Bem-vindo ao meu repositotio de aprendizado sobre GIT! Este espaço é dedicado 
   - git checkout "nome_do_branch" : Mudar para um branch específico
   - git merge "nome_do_branch" : Fundir (unir) alterações de um branch para outro
   - git log : Historico dos logs (commits)
+  - git restor : Descartar mudanças não comitadas em um arquivo
+  - git restore --source=<commit> <arquivo> : Restaurar um arquivo para um commit específico:
+    - Isso restaura o arquivo para o estado em que estava no commit especificado. Substitua <commit> pelo hash SHA ou referência do commit desejado.
+  - git commit --amend -m "Nova mensagem do commit" : para mudar a mensagem do commit, caso queira adicionar arquivo antes e depois mudar a mensagem e so fazer um git add antes
+    - No entanto, se você já tiver enviado o commit para um repositório remoto, você precisará forçar o envio do novo commit para substituir o antigo. Para isso, você pode usar git push --force
+  - git reset --soft <commit> mantém as alterações feitas nos arquivos no diretório de trabalho, mas desfaz os commits posteriores. Isso significa que o conteúdo dos arquivos será mantido exatamente como está, mas você precisará fazer um novo commit para incorporar as alterações.
+  - git reset --mixed <commit> é o comportamento padrão do git reset. Ele desfaz os commits posteriores e remove as alterações da área de preparação (staging area), mas mantém as alterações nos arquivos no diretório de trabalho. Isso permite que você reavalie as alterações e escolha quais arquivos deseja adicionar à área de preparação para um novo commit.
+  - git reset --hard <commit> é a forma mais drástica de reset. Ele desfaz todos os commits posteriores, remove as alterações da área de preparação e descarta todas as alterações nos arquivos no diretório de trabalho. Isso restaura o estado do repositório para o estado exato que estava no commit especificado.
     
