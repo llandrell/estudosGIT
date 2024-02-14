@@ -40,3 +40,4 @@ Bem-vindo ao meu repositotio de aprendizado sobre GIT! Este espaço é dedicado 
   - git checkout "nome_do_branch" : Mudar para um branch específico
   - git merge "nome_do_branch" : Fundir (unir) alterações de um branch para outro
   - git log : Historico dos logs (commits)
+    
