@@ -40,7 +40,6 @@ Bem-vindo ao meu repositotio de aprendizado sobre GIT! Este espaço é dedicado 
   - git clone URL_branch: --branch nome_DA_Branch --single-branch: Esta opção faz com que o Git clone apenas a branch especificada
   - git diff : Verificar as diferenças entre arquivos não rastreados e rastreados:
   - git branch "nome_do_branch" : Criar uma nova branch.
-  - git checkout "nome_do_branch" : Mudar para um branch específico
   - git merge "nome_do_branch" : Fundir (unir) alterações de um branch para outro
   - git log : Historico dos logs (commits)
   - git restor : Descartar mudanças não comitadas em um arquivo
@@ -51,4 +50,11 @@ Bem-vindo ao meu repositotio de aprendizado sobre GIT! Este espaço é dedicado 
   - git reset --soft <commit> mantém as alterações feitas nos arquivos no diretório de trabalho, mas desfaz os commits posteriores. Isso significa que o conteúdo dos arquivos será mantido exatamente como está, mas você precisará fazer um novo commit para incorporar as alterações.
   - git reset --mixed <commit> é o comportamento padrão do git reset. Ele desfaz os commits posteriores e remove as alterações da área de preparação (staging area), mas mantém as alterações nos arquivos no diretório de trabalho. Isso permite que você reavalie as alterações e escolha quais arquivos deseja adicionar à área de preparação para um novo commit.
   - git reset --hard <commit> é a forma mais drástica de reset. Ele desfaz todos os commits posteriores, remove as alterações da área de preparação e descarta todas as alterações nos arquivos no diretório de trabalho. Isso restaura o estado do repositório para o estado exato que estava no commit especificado.
-    
+    ### GIT checkout (Comandos)
+    - git checkout <nome-da-branch: Mudar para uma branch específica
+    - git checkout -b <nome-da-nova-branch>: Criar e mudar para uma nova branch:
+    - git checkout -- <nome-do-arquivo>: Isso cria uma nova branch com o nome especificado e muda para ela. 
+        - Restaurar um arquivo para a versão do último commit
+  
+
+
